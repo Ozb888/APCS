@@ -1,0 +1,10 @@
+;Scheme
+(begin
+  (display "Hello, World!"")
+  (newline))
+
+; NetLogo
+write "hello world"
+
+;Python
+print ("hello world")
