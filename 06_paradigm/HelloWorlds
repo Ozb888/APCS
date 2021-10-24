@@ -1,0 +1,25 @@
+<<<<<<< Updated upstream
+;Scheme
+=======
+//Oscar Breen
+//APCS
+//HW06 -- Paradigm Shift-- saying hello world in three different languages
+//2021--09--29
+//Scheme
+>>>>>>> Stashed changes
+(begin
+  (display "Hello, World!"")
+  (newline))
+
+<<<<<<< Updated upstream
+; NetLogo
+write "hello world"
+
+;Python
+=======
+// NetLogo
+write "hello world"
+
+//Python
+>>>>>>> Stashed changes
+print ("hello world")
