@@ -5,7 +5,7 @@ HW23 -- What Does Equality Look Like? -- simulating coin flip with bias
 2021-10-25
 time spent: 1 hr
 import java.util.Random;
-*\
+*/
 public class Coin {
 
 	int value, flipCount, headsCount, tailsCount;
