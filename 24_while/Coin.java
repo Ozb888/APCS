@@ -5,7 +5,9 @@ HW24 -- Get It While You Can -- while loop to add limita
 2021-10-25
 time spent: 1 hr
 DISCO --- tails count is irrelevent 
-QCC -- purpose of number being 65536?
+QCC -- purpose of number being 65536? 
+Other uses of java.util.Random? 
+Typed user input next?
 POST-v0 MODS -- added counter and the reset method 
 */
 
