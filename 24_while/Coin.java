@@ -1,9 +1,12 @@
 /*
 Oscar Breen
 APCS
-HW23 -- What Does Equality Look Like? -- simulating coin flip with bias
+HW24 -- Get It While You Can -- while loop to add limita
 2021-10-25
 time spent: 1 hr
+DISCO --- tails count is irrelevent 
+QCC -- purpose of number being 65536?
+POST-v0 MODS -- added counter and the reset method 
 */
 
 import java.util.Random;
