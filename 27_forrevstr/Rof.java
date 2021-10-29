@@ -26,14 +26,13 @@ public class Rof {
 
   public static String reverseR(String s) {
   String results = "";
-	length(s) = x;
+	int x = (s.length());
    if (x == 0){
-  System.out.println( "Strin is empty");
+  return s;
    }
 	 else {
-	 reverseR((s.substring(x) - 1));
+	return reverseR(s.substring(1)) + s.substring(0 , 1);
 	 }
-	return s;
   }
 
 
@@ -44,5 +43,6 @@ public class Rof {
 		System.out.println( fenceF(3) ); //expect "|--|--|"
 
 		System.out.println( reverseF("stressed") ); //expect "desserts"
+		System.out.println( reverseR("stressed") );//expect "desserts"
 	}
 }
