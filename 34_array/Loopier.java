@@ -1,4 +1,4 @@
-import java.util.Random;
+
 public class Loopier {
 
 public static int[] intArray(int[] input){
