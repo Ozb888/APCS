@@ -1,4 +1,10 @@
-import java.util.Random;
+/*
+Team 10: Consonants
+APCS
+HW34 -- A Pirate's Life for Me -- about arrays and setting them as well as searching them
+2021-11-14
+time spent: 2
+*/
 public class Loopier {
 
 public static int[] intArray(int[] input){
@@ -54,18 +60,17 @@ counter += 1;
 return counter;
 }
 
-public static int freqR( int[] a, int i, int target, int counter ){
+public static int freqR( int[] a, int target, int i, int counter ){
 if ( i == a.length){
         return counter;
 }
-else{
- if (a[i] == target) {
+else if (a[i] == target) {
         return freqR(a, target, i =i+1, counter = counter+1);
 }
 else { 
         return freqR(a, target, i = i+1, counter);
 }                                                                                                                       }
-}
+
 
 public static void main (String [] args) {
 int[] array = new int[10];
