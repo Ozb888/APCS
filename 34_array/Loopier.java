@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 Team 10: Consonants
 APCS
@@ -5,6 +6,9 @@ HW34 -- A Pirate's Life for Me -- about arrays and setting them as well as searc
 2021-11-14
 time spent: 2
 */
+=======
+
+>>>>>>> 8503b70532867caf3d47e8487003e961b0d64edb
 public class Loopier {
 
 public static int[] intArray(int[] input){
