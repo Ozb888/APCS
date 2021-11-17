@@ -1,3 +1,10 @@
+/*
+Team 10 Consonantis -- Oscar, Ari, Eric
+APCS
+HW37 -- PPMP[]. -- coding bat array practice
+2021-11-16
+time spent: 1
+*/
 public class array1{
 
 public boolean firstLast6(int[] nums) {
