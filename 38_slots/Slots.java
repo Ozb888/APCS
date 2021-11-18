@@ -1,12 +1,11 @@
  /*****************************************************
- * Clyde "Thluffy" Sinclair
- * APCS pd00
- * HW38 -- Shmoney
+ * Team 1- -- Oscar, Eric, Ari
+ * APCS pd08
+ * HW38 -- Spin Classv -- use of instances for random generation
  * 2021-11-18
- *
- * class Slots
- * skeleton
- *****************************************************/
+ *time spent: 1
+ * 
+ * ******************************************/
 
 public class Slots {
 
