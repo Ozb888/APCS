@@ -1,0 +1,40 @@
+ERRORs
+
+3 error types
+Compile time      Run Time          Logic
+
+Compile time error
+-> Syntax issue, commonly mistypes
+TO FIX: go to line, check for instant  mistype 
+        -use of semicolon     
+        -use of proper camelCase throughout
+        -curly bracket opening and closing
+        -quotes for strings closed
+        -parentheses open and closing
+        -etc.
+Bisection Debug: separate full code to new file, separate each half in a different file, check which one does not work
+                 separet this non wokring code, repeat, continue until error is much more specefied and search.
+                 
+Dont take computers advice.
+
+
+Run-time error
+ ->Loop/recursion problems (LR) generally infinite, left hanging
+ TO FIX: S.O.U.P before and after loops and recursions to see which is the culprit
+       -check for lack of base case
+       -S.O.U.P methods
+       -etc
+ output too heavy? comment out some unnecessary S.O.U.P's and simplify code, eliminate experimental or unnecessary lines.
+ 
+ Logic error
+ -> Computer runs it: it doesnt do what you wanted it to
+ TO FIX: break down code into components
+        -remember properties of primitive types
+        -inheritence of code
+        -Break down expressions to more easily readable and comment outable code, 
+        -Return AFTER code of a method (do not compact whole functions on the return line)
+        
+        
+End Case; Go to ducky, explain code and its purpose in depth, see if you spot the issue yourself
+         -Step away from the computer for a moment, think about it while away from the computer going though the code in your head
+         -Seek help from partners and another set of eyes on your code
