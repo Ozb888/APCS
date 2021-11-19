@@ -1,4 +1,5 @@
-ERRORs
+
+ThinkJava D    ERRORs
 
 3 error types
 Compile time      Run Time          Logic
