@@ -95,7 +95,7 @@ int swap2;
   {
     boolean retBoo = false;
 
-  if((_fruits[0]).equals(_fruits[0]) && (_fruits[0]).equals(_fruits[2])){
+  if((_fruits[0]).equals(_fruits[1]) && (_fruits[0]).equals(_fruits[2])){
 	return retBoo=true;
 }
   else{
