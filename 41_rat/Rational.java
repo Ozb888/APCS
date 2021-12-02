@@ -2,7 +2,7 @@
 APCS
 HW41 -- Be Rational -- Code that deasl with rational numbers
 2021-12-1
-time spent: <elapsed time in hours, rounded to nearest tenth>
+time spent: 1,5
 DISCO -- (long) does not also make an int into a "int.0" as double does, double best for use.
       -- running a method outside a S.O.U.P still prints the change (pass-by-value java)
 QCC ---- why are we doing this? is it because of the PBV? seems like a bit of a step back from
