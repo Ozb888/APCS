@@ -9,7 +9,6 @@ QCC
      -- still dont know if theres a way to bypass creating new instances for each test case
 */
 public class Rational {
-
  private static int denominator;
  private static int numerator;
 
