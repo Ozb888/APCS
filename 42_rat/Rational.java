@@ -5,8 +5,7 @@ HW41 -- Be More Rational -- Code that deals with rational numbers, lots of insta
 2021-12-6
 time spent: 1,5
 DISCO -- I dont think anything
-QCC 
-     -- still dont know if theres a way to bypass creating new instances for each test case
+QCC  -- still dont know if theres a way to bypass creating new instances for each test case
 */
 public class Rational {
  private static int denominator;
