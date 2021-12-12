@@ -2,7 +2,7 @@
 // APCS pd8
 // HW45 -- Array of Titanium -- Using abstract methods and implementing interfaces.
 // 2021-12-9
-
+//t 1
 /*
 DISCO: the methods dont change.
 	error about SuperArray not being Abstract but it went away on its own.
