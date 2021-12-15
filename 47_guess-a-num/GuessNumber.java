@@ -1,9 +1,9 @@
 
-// Clyde "Thluffy" Sinclair
-// APCS pd0
-// HW47 -- ?
-// 2021-12-15w
-// time spent: _ hrs
+// Oscar Breen -- Team Consonants -- Eric , Ari
+// APCS pd8
+// HW47 -- Guess Again -- using iterative and recursive binary type organizing 
+// 2021-12-15
+// time spent: 1.5 hrs
 
 /***
  * class GuessNumber -- fun fun fun!
@@ -21,8 +21,10 @@
  ***/
 
 /***
-    DISCO:
-    QCC:
+    DISCO: Binarys kind of easy and really fast
+           Divide and set new bounds.
+           
+    QCC:  Is there a way of doing it that doesnt use so many if statements?
  ***/
 import java.util.Scanner;
 
