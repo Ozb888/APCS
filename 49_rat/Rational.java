@@ -65,11 +65,10 @@ gcd();
 numnums.gcd();
 numerator = numerator + numnums.numerator;
 }
-
 public int compareTo(Object obj){
 Rational ob = (Rational)obj;
-double callVal = floatValue();
-double PVal = ob.floatValue();
+double callVal = (numerator / denominator);
+double PVal = (ob.numerator / ob.denominator);
 if(!(obj instanceof Rational)){
         throw new ClassCastException("error bro not A RATIONAL");
 } 
@@ -89,8 +88,8 @@ return -1;
 
 public boolean equals(Object obj){
 Rational ob = (Rational) obj;
-double callVal = floatValue();
-double PVal = ob.floatValue();
+double callVal =  (numerator / denominator);
+double PVal = (ob.numerator / ob.denominator);;
 if (obj instanceof Rational){
   return callVal == PVal;
 }
@@ -99,3 +98,6 @@ throw new ClassCastException(" error bro, not rational");
 }
 }
 }
+
+
+
