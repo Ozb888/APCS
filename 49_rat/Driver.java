@@ -28,6 +28,10 @@ System.out.println("compare test "+ r4.compareTo(s4));
 System.out.println("compare test " + s4.compareTo(r4));
 Rational x1 = new Rational (10 , 60);
 System.out.println("compare test " + x1.compareTo(r4));
+
+System.out.println("equals test " + r4.equals(s4));
+System.out.println("equals test " + x1.equals(r4));
+
 r4.subtract(s4);
 System.out.println("subtraction test "+ r4.floatValue());
 

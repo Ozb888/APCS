@@ -88,4 +88,14 @@ double PVal = ob.floatValue();
   }
 return -1;
 }
+
+
+public boolean equals(Object obj){
+Rational ob = (Rational) obj;
+double callVal = floatValue();
+double PVal = ob.floatValue();
+
+  return callVal == PVal;
+
+}
 }
