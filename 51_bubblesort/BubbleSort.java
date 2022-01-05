@@ -1,39 +1,16 @@
-<<<<<<< HEAD
-
-// Clyde "Thluffy" Sinclair
-// APCS pd0
-// HW51 -- implementing bubblesort
-// 2022-01-04t
-// time spent:  hrs
-=======
 // Oscar Breen -- Team Consonants -- Ari , Eric
 // APCS pd8
 // HW51 -- implementing bubblesort
 // 2022-01-04
 // time spent: 1.2 hrs
->>>>>>> dc056458c8c0e40349d6cfd558458f7fa723cd8f
 
 /******************************
  * class BubbleSort -- implements bubblesort algorithm (vanilla)
  *
  * ALGO:
-<<<<<<< HEAD
- * 
- * DISCO
- *
- * QCC
- * q0: If a pass requires no swaps, what do you know?
- * a0: 
- * q1: After pass p, what do you know?
- * a1: 
- * q2: How many passes are necessary to completely sort?
- * a2: 
- * 
-=======
  *
  * DISCO
  *  extended us eof ArrayLists maethoids, veryu easy to integrate
-
  * QCC
         i think, i am not sure, that my code sorts it all on the one go, i tried to initally get around this
         by making ti in sets of two but then theres the issue of odd numbered arrays and how to switch between what
@@ -45,7 +22,6 @@
  * q2: How many passes are necessary to completely sort?
  * a2: integer of the size of the array
  *
->>>>>>> dc056458c8c0e40349d6cfd558458f7fa723cd8f
  ******************************/
 
 import java.util.ArrayList;
@@ -103,8 +79,6 @@ public class BubbleSort
     }
 //System.out.println(loops); // if completed all should show -1
   }
-<<<<<<< HEAD
-=======
 return input;
   }
 
@@ -153,7 +127,6 @@ return input;
 
 }//end class BubbleSort
 
->>>>>>> dc056458c8c0e40349d6cfd558458f7fa723cd8f
 
 
   // ArrayList-returning bubbleSort
@@ -178,59 +151,16 @@ return input;
 //System.out.println(loops); // if completed all should show -1
 return input;
   }
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> dc056458c8c0e40349d6cfd558458f7fa723cd8f
 
 
   public static void main( String [] args )
   {
 
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> dc056458c8c0e40349d6cfd558458f7fa723cd8f
       ArrayList mark = new ArrayList<Integer>();
       mark.add(7);
       mark.add(1);
       mark.add(5);
       mark.add(12);
       mark.add(3);
-<<<<<<< HEAD
-      System.out.println( "ArrayList mark before sorting:\n" + mark );
-      bubbleSortV(mark);
-      System.out.println( "ArrayList mark after sorting:\n" + mark );
-      ArrayList coco = populate( 10, 1, 1000 );
-      System.out.println( "ArrayList coco before sorting:\n" + coco );
-      bubbleSortV(coco);
-      System.out.println( "ArrayList coco after sorting:\n" + coco );
-      
-
-    // tests for the non void method
-      ArrayList glen = new ArrayList<Integer>();
-      glen.add(7);
-      glen.add(1);
-      glen.add(5);
-      glen.add(12);
-      glen.add(3);
-      System.out.println( "ArrayList glen before sorting:\n" + glen );
-      ArrayList glenSorted = bubbleSort( glen );
-      System.out.println( "sorted version of ArrayList glen:\n" 
-      + glenSorted );
-      System.out.println( "ArrayList glen after sorting:\n" + glen );
-      ArrayList sally = populate( 10, 1, 1000 );
-      System.out.println( "ArrayList sally before sorting:\n" + sally );
-      ArrayList sallySorted = bubbleSort( sally );
-      System.out.println( "sorted version of ArrayList sally:\n" 
-      + sallySorted );
-      System.out.println( "ArrayList sally after sorting:\n" + sally );
-      //System.out.println( sally ); //not sure why this is here      
-
-  }//end main
-
-}//end class BubbleSort
-=======
->>>>>>> dc056458c8c0e40349d6cfd558458f7fa723cd8f
