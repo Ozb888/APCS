@@ -1,19 +1,24 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// Oscar Breen -- Team Consonants2 -- Ari, Marcus 
+// APCS pd8
 // HW53 -- implementing insertion sort
 // 2022-01-06r
-// time spent:  hrs
+// time spent: 0.6 hrs
 
 /******************************
  * class InsertionSort -- implements InsertionSort algorithm
  *
  * ALGO:
- * 
- * DISCO
+ * adding new element to the list, sorts it through comparison of the element to its left, if larger than it,
+   then it continues along to the next element, if not, it swaps the two numebrs adn then rechecks if it, 
+   in its new spot, is also smaller or larger than another value to its left
+ * DISCO: while i at first still thought it would be veiwing only in paris of the two, it still remains that the list before 
+ 	, and the fact that its sorted, exists along each pass, as it goes through data set, not switiching between two different
+	arrays (which we initally tried to do)
  *
- * QCC
+ * QCC; is this the longest in terms of time sorting method we have made? becasue it seems that it's the most inefficient
+ 	and what was meant in class when it was said that a comparison is shorter than a swap, doesnt the comparison still need a swap?
  * q0: How many passes to sort n elements?
- * a0: n - 1
+ * a0: n - 1 passes
  * q1: What do you know after pass p?
  * a1: that p+1 elements are sorted
  * q2: How will you know when sorted?
@@ -21,7 +26,7 @@
  * q3: What constitues a pass?
  * a3: increasing the sorted list size by one
  * q4: What must you track?
- * a4: the size of the sorted and unsorted arrays
+ * a4: how far along the array it has sorted (partitions)
  ******************************/
 
 
