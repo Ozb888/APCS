@@ -82,6 +82,28 @@ public class BubbleSort
 return input;
   }
 
+ // ArrayList-returning bubbleSort
+  // postcondition: order of input ArrayList's elements unchanged
+  //                Returns sorted copy of input ArrayList.
+  public static ArrayList<Comparable> bubbleSort( ArrayList<Comparable> input )
+  {
+    int size =  input.size();
+    int loops = size;
+    shuffle(input);
+    while (loops >= 0){
+        for( int i = (size - 2); i >= 0; i = i - 1){
+                if (input.get(i).compareTo(input.get(i+1)) == 1){
+                    Comparable val = input.get(i);
+                    input.remove(i);
+                    input.add(i+1 , val);
+                 }
+         }
+
+        loops --;
+    }
+//System.out.println(loops); // if completed all should show -1
+return input;
+  }
 
 
   public static void main( String [] args )
@@ -129,38 +151,5 @@ return input;
 
 
 
-  // ArrayList-returning bubbleSort
-  // postcondition: order of input ArrayList's elements unchanged
-  //                Returns sorted copy of input ArrayList.
-  public static ArrayList<Comparable> bubbleSort( ArrayList<Comparable> input )
-  {
-    int size =  input.size();
-    int loops = size;
-    shuffle(input);
-    while (loops >= 0){
-        for( int i = (size - 2); i >= 0; i = i - 1){
-                if (input.get(i).compareTo(input.get(i+1)) == 1){
-                    Comparable val = input.get(i);
-                    input.remove(i);
-                    input.add(i+1 , val);
-                 }
-         }
+ 
 
-        loops --;
-    }
-//System.out.println(loops); // if completed all should show -1
-return input;
-  }
-
-
-
-  public static void main( String [] args )
-  {
-
-
-      ArrayList mark = new ArrayList<Integer>();
-      mark.add(7);
-      mark.add(1);
-      mark.add(5);
-      mark.add(12);
-      mark.add(3);
