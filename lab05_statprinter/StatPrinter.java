@@ -1,8 +1,8 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// NAOB| Nakib Abedin + Oscar Breen
+// APCS pd07
 // L05 -- pulling it together
 // 2022-02-03r
-// time spent:  hrs
+// time spent: 1.0 hrs
 
 
 /**
@@ -55,7 +55,7 @@ import java.util.ArrayList;
 public class StatPrinter
 {
   // instance variable for frequencies of each integer in input ArrayList
-//  public ArrayList <Integer> _frequency;
+  ArrayList <Integer> _frequency = new ArrayList<>();
 
 
   //*************** QUESTION 02 **************************
@@ -66,7 +66,24 @@ public class StatPrinter
   //  _frequency would be [0,0,3,2,0,1]
   public StatPrinter( ArrayList <Integer> data )
   {
-    ArrayList <Integer> _frequency = new ArrayList<>();
+    /* YOUR IMPLEMENTATION HERE */
+    int localMax = max(data);
+    while (localMax+1 > 0){
+        _frequency.add(0);
+        localMax = localMax-1;
+      }
+    for(int x=0; x < data.size(); x++){
+      _frequency.set(data.get(x), _frequency.get(data.get(x))+1);
+      }
+    System.out.println(_frequency);
+  }
+
+
+  //*************** QUESTION 01 **************************
+  //precond:  data.size() > 0
+  //postcond: returns largest integer in data
+  public Integer max( ArrayList <Integer> data )
+  {
     /* YOUR IMPLEMENTATION HERE */
     int max = 0;
 
@@ -75,41 +92,35 @@ public class StatPrinter
         max = data.get(i);
       }
      }
-    while (max+1 > 0){
-        _frequency.add(0);
-        max = max-1;
-      }
-    for(int x=0; x < data.size(); x++){
-      _frequency.set((data.get(x)+1), _frequency.get(data.get(x))+1);
-      }
+
+     return max;
   }
 
-  //
-  // //*************** QUESTION 01 **************************
-  // //precond:  data.size() > 0
-  // //postcond: returns largest integer in data
-  // public Integer max( ArrayList <Integer> data )
-  // {
-  //   /* YOUR IMPLEMENTATION HERE */
-  // }
-  //
-  //
-  // //*************** QUESTION 03 **************************
-  // //postcond: returns true if i > 0 and i < _frequency.size() - 1
-  // //          and _frequency.get( i - 1 ) < _frequency.get( i )
-  // //          and _frequency.get( i + 1 ) < _frequency.get( i )
-  // //          Otherwise, returns false
-  // //eg, for _frequency [1,2,1,5,5,8,2,4]
-  // //    2 and 8 are local modes, so
-  // //    isLocalMode(0) -> false
-  // //    isLocalMode(1) -> true
-  // //    isLocalMode(5) -> true
-  // public boolean isLocalMode( int i )
-  // {
-  //   /* YOUR IMPLEMENTATION HERE */
-  // }
-  //
-  //
+
+  //*************** QUESTION 03 **************************
+  //postcond: returns true if i > 0 and i < _frequency.size() - 1
+  //          and _frequency.get( i - 1 ) < _frequency.get( i )
+  //          and _frequency.get( i + 1 ) < _frequency.get( i )
+  //          Otherwise, returns false
+  //eg, for _frequency [1,2,1,5,5,8,2,4]
+  //    2 and 8 are local modes, so
+  //    isLocalMode(0) -> false
+  //    isLocalMode(1) -> true
+  //    isLocalMode(5) -> true
+  public boolean isLocalMode( int i )
+  {
+    /* YOUR IMPLEMENTATION HERE */
+    if (i > 0 &&
+        i < _frequency.size() - 1 &&
+        _frequency.get( i - 1 ) < _frequency.get( i ) &&
+        _frequency.get( i + 1 ) < _frequency.get( i )
+    ){
+      return true;
+    }
+    return false;
+  }
+
+
   // //*************** QUESTION 04 **************************
   // //postcond: returns list of modes in _frequency
   // public ArrayList<Integer> getLocalModes()

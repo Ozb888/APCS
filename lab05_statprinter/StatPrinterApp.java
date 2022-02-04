@@ -37,6 +37,8 @@ public class StatPrinterApp
     al1.add(4);
 
     StatPrinter sp1 = new StatPrinter( al1 );
+    System.out.println(sp1.isLocalMode(4));
+    System.out.println(sp1.isLocalMode(0));
 
     /*
       System.out.println( "sp1 testing... " );
