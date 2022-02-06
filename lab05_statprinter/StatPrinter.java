@@ -1,8 +1,8 @@
 // NAOB| Nakib Abedin + Oscar Breen
 // APCS pd07
 // L05 -- pulling it together
-// 2022-02-03r
-// time spent: 1.0 hrs
+// 2022-02-07m
+// time spent: 2.0 hrs
 
 
 /**
@@ -82,9 +82,8 @@ public class StatPrinter
   //*************** QUESTION 01 **************************
   //precond:  data.size() > 0
   //postcond: returns largest integer in data
-  public Integer max( ArrayList <Integer> data )
+  public Integer max( ArrayList <Integer> data ) // O(n)
   {
-    /* YOUR IMPLEMENTATION HERE */
     int max = 0;
 
     for(int i=0; i< data.size(); i++){
@@ -107,9 +106,9 @@ public class StatPrinter
   //    isLocalMode(0) -> false
   //    isLocalMode(1) -> true
   //    isLocalMode(5) -> true
-  public boolean isLocalMode( int i )
+
+  public boolean isLocalMode( int i ) // O(1)
   {
-    /* YOUR IMPLEMENTATION HERE */
     if (i > 0 &&
         i < _frequency.size() - 1 &&
         _frequency.get( i - 1 ) < _frequency.get( i ) &&
@@ -121,20 +120,40 @@ public class StatPrinter
   }
 
 
-  // //*************** QUESTION 04 **************************
-  // //postcond: returns list of modes in _frequency
-  // public ArrayList<Integer> getLocalModes()
-  // {
-  //   /* YOUR IMPLEMENTATION HERE */
-  //
-  // }
-  //
-  //
-  // //*************** QUESTION 05 **************************
-  // //precond:  longestBar > 0
-  // public void printHistogram( int longestBar )
-  // {
-  //   /* YOUR IMPLEMENTATION HERE */
-  // }
+  //*************** QUESTION 04 **************************
+  //postcond: returns list of modes in _frequency
+  public ArrayList<Integer> getLocalModes() // O(n)
+  {
+    ArrayList <Integer> localModes = new ArrayList<>();
 
+
+  for(int i = 0; i<_frequency.size(); i++ ){
+    if(isLocalMode(i)){
+      localModes.add(_frequency.get(i));
+    }
+  }
+  return localModes;
+
+}
+
+
+  //*************** QUESTION 05 **************************
+  //precond:  longestBar > 0
+  public void printHistogram( int longestBar ) //O (n^2)
+  {
+  int big = max(_frequency);
+  int ratio = (longestBar/big);
+  int numbers;
+  String bar = "";
+  for(int e=0; e < _frequency.size(); e++){
+    numbers = _frequency.get(e) * ratio;
+    while(numbers > 0){
+  //    System.out.println("reach");
+      bar += "*";
+      numbers -= 1;
+    }
+    System.out.println(e + ": " + bar);
+    bar = "";
+  }
+}
 }//end class StatPrinter

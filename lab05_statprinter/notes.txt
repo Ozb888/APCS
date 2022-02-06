@@ -1,23 +1,39 @@
 NAOB| Nakib Abedin + Oscar Breen
 APCS pd07
 L05 -- pulling it together
-2022-02-03r
-time spent: 1.0 hrs
+2022-02-07m
+time spent: 2.0 hrs
 
 
 DISCO
 ------------------------------------------------
 * Be careful with the order of boolean short circuiting.
+* if statements should not affect the run time (Big O)
 ================================================
 
 
 QCC
 ------------------------------------------------
 * When calling an instance of a class, you access instance variables even if they are outside the constructor
+* should we round up or round down for number of stars in Histograms?
 ================================================
 
 
 MISC
 ------------------------------------------------
-*
+* 
 ================================================
+
+Big O's
+
+Integer max(ArrayList<Integer>){}
+- O(n)
+
+boolean isLocalMode(int i){}
+- O(1)
+
+ArrayList<Integer> getLocalModes(){}
+- O(n)
+
+void printHistogram(int longestBar){}
+- O(n^2)

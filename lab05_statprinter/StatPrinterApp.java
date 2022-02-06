@@ -1,8 +1,8 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// NAOB Oscar Breen Nakib Abedin
+// APCS pd7
 // L05 -- pulling it together
-// 2022-02-03r
-// time spent:  hrs
+// 2022-02-07m
+// time spent: 2.0 hrs
 
 /***
  * class StatPrinterApp
@@ -37,9 +37,26 @@ public class StatPrinterApp
     al1.add(4);
 
     StatPrinter sp1 = new StatPrinter( al1 );
-    System.out.println(sp1.isLocalMode(4));
-    System.out.println(sp1.isLocalMode(0));
+// testing isLocalMode
+System.out.println("\nTesting isLocalMode \n");
 
+    System.out.println(sp1.isLocalMode(0));
+    System.out.println(sp1.isLocalMode(1));
+    System.out.println(sp1.isLocalMode(2));
+    System.out.println(sp1.isLocalMode(3));
+    System.out.println(sp1.isLocalMode(4));
+    System.out.println(sp1.isLocalMode(5));
+//testing getLocalModes
+System.out.println("\nTesting getLocalModes\n");
+
+    System.out.println(sp1.getLocalModes());
+//testing printHistogram
+System.out.println("\nTesting printHistogram bar length 0\n");
+sp1.printHistogram(0);
+System.out.println("\nTesting next printHistogram bar length 4\n");
+sp1.printHistogram(4);
+System.out.println("\nTesting next printHistogram bar length 10\n");
+sp1.printHistogram(10);
     /*
       System.out.println( "sp1 testing... " );
       sp1.max( al1 );
