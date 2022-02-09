@@ -1,0 +1,27 @@
+N.O.A.B Oscar Breen Nakib Abedin
+APCS
+HW60 -- A Termite is-a Turtle, a Thinker is-a Turtle
+2022-2-8t
+time spent: 1.2 hrs
+
+02-08-2022
+DISCO:
+- arrays don't have an in-built feature that lets you add and remove items
+- the array's length is immutable
+- always check your for loop for index out of bound errors
+QCC:
+- What is the point of mess?
+- Why did we not use ArrayLists instead of Arrays?
+
+02-07-2022
+DISCO
+- thinkers are sometimes receiving two piles before splitting.
+- handsa-out method is really effective
+QCC
+- should thye be making a third pile when sorting?
+
+THINKER FIRMWARE
+if pile not sorted, split and give to two empty handed thinkerin
+if pile sorted, return pile to same thinkerin
+if two piles are received, sort using the created merge rules
+repeat.
