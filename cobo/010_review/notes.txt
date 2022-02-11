@@ -1,3 +1,17 @@
+Oscar Breen
+APCS
+HW 63 -- Read/Review/Expand 
+2022--02--10
+time spent: 3.5
+
+DISCO
+-- Csv files are very useful and don't slow down the code at all
+-- Scanners are heavily required when deciphering test from separate file
+QCC
+
+- how was this data on how positive/negative a word is obtained?
+- should we a have a required format or are we making entirely new sentences in the upcoming lab
+
 1)
 	A) sentimentVal( String word )
 	B) yes, it requires a string.
@@ -16,3 +30,27 @@
 	A) he has essentially made it very unlikely to not get a 4 or 0, as their if statements have made the highewst star 
 	inclusive rather than exclusive, he has made everything LOWER than 15 be given a 4 at the top of his if chain. simply 
 	change them to be upper exclsuive and this should fix it
+3.3)
+	A)indexOf provides the index or posiiton for any action and substring allows fro the sectioning off of a string. adding 1
+	is important becasue teh indexOf method is inclusive on the 'first' index
+5.3)
+	A) Static decides how it can be called, static means both the class and object can call it, whereas non-static belongs exclusivley
+	to the object
+6.3)
+	A)Insatead of calling to the random method of adjecitves, we instead directly check if the given word is more positive 
+	or negative, then replace it with the opposite of the result
+
+1.4)
+	A)to bombard an enemy companys reviews and discourage customers from going there
+2.4)
+	A) to infloate your own companys good reviews to look better for customers
+3.4)
+	A) should make the method acitvely go through and compare each word until it finds a heavily negative word, and automatically
+	replaces that with a positive one, (constant comparison type code)
+5.4)
+	A) removes index 1 one of oneWord
+6.4)
+	A)because the method has to compare that word to others in a file, none of those words were designed to have a * in front
+	So if we kept it, no sentiment value could be assigned to it
+7.4)
+	A) replace more normal adjecitves with positive ones, maybe subconciosuly benefits the review
