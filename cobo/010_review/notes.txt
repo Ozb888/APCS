@@ -1,0 +1,18 @@
+1)
+	A) sentimentVal( String word )
+	B) yes, it requires a string.
+	c) return type double.
+3)
+	A) yes, correct initialization and arguments
+	B) No the initialization is a string and the argument a double, they are switched
+	C) No, while the initialization is correct, the number of arguments is not.
+4)
+	A) totalSentiment essentially iterates through the review per each string word and checks the sentiment value
+	  of each adding to each other as it goes.
+5)
+	A) Yes kind of, they tend to be deflated as some regular words are deemed bad and some, in context, great words are deemed ok
+	B) could have it acccount for double negatives or account for the proportions of the review 
+6)
+	A) he has essentially made it very unlikely to not get a 4 or 0, as their if statements have made the highewst star 
+	inclusive rather than exclusive, he has made everything LOWER than 15 be given a 4 at the top of his if chain. simply 
+	change them to be upper exclsuive and this should fix it
