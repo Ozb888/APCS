@@ -1,0 +1,12 @@
+Oscar Breen 
+2/12/22
+pd 07
+HW - L06
+
+Summary
+The class can convert files to java readable ones, 
+Convert those to Lists, java usable ones
+Scan each word in that list for how Sentimental it is, 
+Find out the sum of all those values for each
+Replace indicated words with the opposite of their sentimental value to flip the point of a review
+
