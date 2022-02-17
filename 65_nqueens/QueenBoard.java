@@ -23,28 +23,19 @@ public class QueenBoard
    * If a solution is found, board shows position of N queens,
    * returns true.
    * If no solution, board is filled with 0's,
-`   * returns false.
+   * returns false.
    */
   public boolean solve()
   {
-    int row = 0;
-    int col = 0;
-    while (row < _board.length) {
-      if (addQueen(row, col) == false) {
-        row ++;
-      }
-      else {
-        addQueen(row, col);
-        col ++;
-        break;
-      }
+    if(solveH(0) == true) {
+      System.out.println("There is a solution!");
+      printSolution();
+      return true;
     }
-    if (solveH(col) == false) {
-      removeQueen(row, col-1);
-      col++;
+    else {
+      System.out.println("There is no solution.");
+      return false;
     }
-
-    return false;
   }
 
 
@@ -52,7 +43,7 @@ public class QueenBoard
    *Helper method for solve.
    */
   private boolean solveH( int col )
-{
+  {
     if (col >= _board.length) {
       return true;
     }
@@ -107,15 +98,9 @@ public class QueenBoard
   //================= YE OLDE SEPARATOR =================
 
   /***
-   * decides if a queen addition is possible and alters board as needed 
-	to prevent future queen interaction
-
-   * precondition: a row and column coordinate, that exists on the _board
-
-   * postcondition: if queen addition is possible, makes that 
-      coordinate a one and all the follwing danger zones -1
-	returns true
-      if queen addition is not possible, returns false
+   * <General description>
+   * precondition:
+   * postcondition:
    */
   private boolean addQueen(int row, int col)
   {
@@ -139,14 +124,9 @@ public class QueenBoard
 
 
   /***
-   * checks if a queen is there and undos board as needed
-   * precondition: a row and column coordinate that exists on the _board
+   * <General description>
+   * precondition:
    * postcondition:
-     if a queen removal is not possible
-       returns false.
-     if a queen removal is possible, returns that coordiante to a zero and 
-     all its danger zones to zero
-      returns true
    */
   private boolean removeQueen(int row, int col){
     if ( _board[row][col] != 1 ) {
@@ -170,15 +150,15 @@ public class QueenBoard
 
 
   /***
-   * prints the board
-   * a _board
-   * postcondition: a printing of the board and points at corresponding
+   * <General description>
+   * precondition:
+   * postcondition:
    */
   public String  toString()
   {
     String ans = "";
     for( int r = 0; r < _board.length; r++ ) {
-      for( int c = 0; c < _board[0].length; c++ ) {
+      for( int c = 0; c < _board.length; c++ ) {
         ans += _board[r][c]+"\t";
       }
       ans += "\n";
@@ -190,7 +170,6 @@ public class QueenBoard
   //main method for testing...
   public static void main( String[] args )
   {
-
     QueenBoard b = new QueenBoard(5);
     System.out.println(b);
     /** should be...
@@ -219,18 +198,14 @@ public class QueenBoard
        0	0	-1	0	0
        0	0	0	-1	0
        0	0	0	0	-1
-       0	0	0	0	 0
-   */
+       0	0	0	0	0
+    */
 
-  QueenBoard c = new  QueenBoard(8);
-  c.solve();
-  c.printSolution();
+    b.solve();
 
+    QueenBoard c = new QueenBoard(8);
+    c.solve();
 
-
- QueenBoard d = new QueenBoard(5);
- d.solve();
- d.printSolution();
   }
 
 }//end class
