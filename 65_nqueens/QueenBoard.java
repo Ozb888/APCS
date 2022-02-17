@@ -28,13 +28,14 @@ public class QueenBoard
   public boolean solve()
   {
     int row = 0;
-    int col = 1;
+    int col = 0;
     while (row < _board.length) {
       if (addQueen(row, col) == false) {
         row ++;
       }
       else {
         addQueen(row, col);
+        col ++;
         break;
       }
     }
@@ -51,8 +52,23 @@ public class QueenBoard
    *Helper method for solve.
    */
   private boolean solveH( int col )
-  {
-
+{
+    if (col >= _board.length) {
+      return true;
+    }
+    else {
+      for(int row = 0; row < _board.length; row++) {
+        if (addQueen(row,col)) {
+          addQueen(row, col);
+          if (solveH(col + 1)) {
+            return true;
+          }
+          else {
+            removeQueen(row, col);
+          }
+        }
+      }
+    }
     return false;
   }
 
@@ -64,6 +80,26 @@ public class QueenBoard
         all negs and 0's replaced with underscore
         all 1's replaced with 'Q'
     */
+    String[][] boardRep = new String[_board.length][_board.length];
+    for(int i = 0; i < _board.length; i++) {
+      for(int j = 0; j < _board.length; j++) {
+        if( _board[i][j] == 1) {
+          boardRep[i][j] = "Q";
+        }
+        else {
+          boardRep[i][j] = "_";
+        }
+      }
+    }
+
+    String ans = "";
+    for( int r = 0; r < _board.length; r++ ) {
+      for( int c = 0; c < _board.length; c++ ) {
+        ans += boardRep[r][c]+"\t";
+      }
+      ans += "\n";
+    }
+    System.out.println(ans);
   }
 
 
@@ -154,6 +190,7 @@ public class QueenBoard
   //main method for testing...
   public static void main( String[] args )
   {
+
     QueenBoard b = new QueenBoard(5);
     System.out.println(b);
     /** should be...
@@ -182,9 +219,18 @@ public class QueenBoard
        0	0	-1	0	0
        0	0	0	-1	0
        0	0	0	0	-1
-       0	0	0	0	0
-    */
+       0	0	0	0	 0
+   */
 
+  QueenBoard c = new  QueenBoard(8);
+  c.solve();
+  c.printSolution();
+
+
+
+ QueenBoard d = new QueenBoard(5);
+ d.solve();
+ d.printSolution();
   }
 
 }//end class
