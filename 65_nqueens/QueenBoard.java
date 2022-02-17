@@ -71,9 +71,15 @@ public class QueenBoard
   //================= YE OLDE SEPARATOR =================
 
   /***
-   * <General description>
-   * precondition:
-   * postcondition:
+   * decides if a queen addition is possible and alters board as needed 
+	to prevent future queen interaction
+
+   * precondition: a row and column coordinate, that exists on the _board
+
+   * postcondition: if queen addition is possible, makes that 
+      coordinate a one and all the follwing danger zones -1
+	returns true
+      if queen addition is not possible, returns false
    */
   private boolean addQueen(int row, int col)
   {
@@ -97,9 +103,14 @@ public class QueenBoard
 
 
   /***
-   * <General description>
-   * precondition:
+   * checks if a queen is there and undos board as needed
+   * precondition: a row and column coordinate that exists on the _board
    * postcondition:
+     if a queen removal is not possible
+       returns false.
+     if a queen removal is possible, returns that coordiante to a zero and 
+     all its danger zones to zero
+      returns true
    */
   private boolean removeQueen(int row, int col){
     if ( _board[row][col] != 1 ) {
@@ -123,9 +134,9 @@ public class QueenBoard
 
 
   /***
-   * <General description>
-   * precondition:
-   * postcondition:
+   * prints the board
+   * a _board
+   * postcondition: a printing of the board and points at corresponding
    */
   public String  toString()
   {
