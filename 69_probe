@@ -16,3 +16,21 @@ time spent: 0.5
   
     q3: Thoughts on optimization?
            - Rule out symmetrical moves. ex; choosing betwen two diagonal choices at (2,2)
+           
+           
+           
+           
+    ALGO:
+    Is tile end? 
+      -if it is, end Algo
+    if its not
+      - is tile open?
+      - if it is walk to it
+            - repeat back to step 1
+      - if tile is closed
+            - do you have a next navailable tile?
+                  - if not, set tile as unavailable and repeat step 1
+            - is next available tile open?
+                   - if it is walk on it
+                        - repeat step 1
+                   - if it is not, repeat this question
