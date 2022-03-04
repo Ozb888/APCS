@@ -2,7 +2,7 @@
 // APCS p7
 // HW70 -- maze solving (blind, depth-first)
 // 2022-03-04r
-// time spent:  hrs
+// time spent: 1 hrs
 
 /***
  * SKEELTON for
@@ -10,17 +10,25 @@
  * Implements a blind depth-first exit-finding algorithm.
  * Displays probing in terminal.
  * 
- * USAGE: 
+ * USAGE: find a route through a maze
  * $ java Maze [path/to/mazefile]
  * (mazefile is ASCII representation of a maze, using symbols below)
  *
  * ALGORITHM for finding exit from starting position:
- *  <INSERT YOUR SUMMARY OF ALGO HERE>
- *
+ *  
+ *  IS maze solved?
+     if so gg, print maze
+	if not, mark location wwith @
+	search for hashtag from top clockwise
+	move to first hashtag found
+    		repeat
+	if no hashtag found place a . on your posiiton  and return top last position 
+		repeat
+
  * DISCO
- * 
+ * it follows almost the exact same code pattern as knighttour
  * QCC
- * 
+ * sending out all directions siumutaneously would eliminate backtracking and be very efficient 
  ***/
 
 //enable file I/O
@@ -198,11 +206,14 @@ public class Maze
 
     //drop our hero into maze at random location on path
     // YOUR RANDOM-POSITION-GENERATOR CODE HERE
-    int startX= (int)(80*Math.random());
-    int startY= (int)(25*Math.random());
+    int startX= (int)(100*Math.random());
+    int startY= (int)(100*Math.random());
+    
     while(!ms.onPath( startX, startY)) {
-      startX = (int)(80*Math.random());
-      startY = (int)(25*Math.random());
+      
+	startX = (int)(100*Math.random());
+      
+	startY = (int)(100*Math.random());
 /*
 	boolean check = false;
         int startX = 5;
