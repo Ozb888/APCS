@@ -16,14 +16,19 @@
  *
  * ALGORITHM for finding exit from starting position:
  *  
+   start
  *  IS maze solved?
-     if so gg, print maze
-	if not, mark location wwith @
+     if so gg,
+     	search for '@'
+     		 replace all with '.' 
+		 no more @?
+		 	print maze
+    if not, mark location with @
 	search for hashtag from top clockwise
 	move to first hashtag found
-    		repeat
-	if no hashtag found place a . on your posiiton  and return top last position 
-		repeat
+    		repeat start
+	if no hashtag found place a . on your posiiton  and return to last position 
+		repeat start
 
  * DISCO
  * it follows almost the exact same code pattern as knighttour
