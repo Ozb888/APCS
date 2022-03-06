@@ -99,7 +99,7 @@ class MazeSolver
   public String toString()
   {
     //send ANSI code "ESC[0;0H" to place cursor in upper left
-    String retStr = "0H";
+    String retStr = "^[[0;OH";
     //emacs shortcut: C-q, ESC
     //emacs shortcut: M-x quoted-insert, ESC
 
@@ -139,6 +139,12 @@ class MazeSolver
     //primary base case
     if ( _maze[x][y] == '$' ) {
 	_solved = true;
+	for( int u = 0; u < _maze[y].length; u++){
+	    for( int c = 0; c < _maze[x].length; c++){
+	    	if(_maze[c][u] == '@')
+	    	    _maze[c][u] = '.';
+	    }
+	}
 	System.out.println( this );
 	System.exit(0);
     }
@@ -206,14 +212,14 @@ public class Maze
 
     //drop our hero into maze at random location on path
     // YOUR RANDOM-POSITION-GENERATOR CODE HERE
-    int startX= (int)(100*Math.random());
-    int startY= (int)(100*Math.random());
+    int startX= (int)(80*Math.random());
+    int startY= (int)(25*Math.random());
     
     while(!ms.onPath( startX, startY)) {
       
-	startX = (int)(100*Math.random());
+	startX = (int)(80*Math.random());
       
-	startY = (int)(100*Math.random());
+	startY = (int)(25*Math.random());
 /*
 	boolean check = false;
         int startX = 5;
