@@ -99,7 +99,7 @@ class MazeSolver
   public String toString()
   {
     //send ANSI code "ESC[0;0H" to place cursor in upper left
-    String retStr = "^[[0;OH";
+    String retStr = "[0;0H";
     //emacs shortcut: C-q, ESC
     //emacs shortcut: M-x quoted-insert, ESC
 
