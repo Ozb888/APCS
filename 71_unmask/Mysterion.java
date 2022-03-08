@@ -167,9 +167,9 @@ public class Mysterion
     + testC +"...");
     printArr(arr1);
     System.out.println("-----------------------");
-
+   }
     // Where be arr2?
-
+    for( int testC = 0; testC < 5; testC++ ) {
     System.out.println("arr3:");
     printArr(arr3);
     mysterion(arr3,0,4,testC);
@@ -177,7 +177,8 @@ public class Mysterion
     + testC +"...");
     printArr(arr3);
     System.out.println("-----------------------");
-
+   }
+    for( int testC = 0; testC < 5; testC++ ) {
     System.out.println("arr4:");
     printArr(arr4);
     mysterion(arr4,0,4,testC);
@@ -185,7 +186,8 @@ public class Mysterion
     + testC +"...");
     printArr(arr4);
     System.out.println("-----------------------");
-
+   }
+    for( int testC = 0; testC < 5; testC++ ) {
     System.out.println("arr6:");
     printArr(arr6);
     mysterion(arr6,0,4,testC);
@@ -193,7 +195,8 @@ public class Mysterion
     + testC +"...");
     printArr(arr6);
     System.out.println("-----------------------");
-
+   }
+    for( int testC = 0; testC < 5; testC++ ) {
     System.out.println("arr5:");
     printArr(arr5);
     mysterion(arr5,0,4,testC);
@@ -201,7 +204,8 @@ public class Mysterion
     + testC +"...");
     printArr(arr5);
     System.out.println("-----------------------");
-    
+   }
+    for( int testC = 0; testC < 5; testC++ ) {
     System.out.println("arr7:");
     printArr(arr7);
     mysterion(arr7,0,4,testC);
@@ -210,7 +214,6 @@ public class Mysterion
     printArr(arr7);
     System.out.println("-----------------------");
 
-    
     }
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
