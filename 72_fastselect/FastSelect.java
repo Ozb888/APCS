@@ -18,7 +18,7 @@ DISCO
    Partition is useful
 
 QCC
-   
+   do we rly havce to use parititon
 
 */
 public class FastSelect
@@ -110,13 +110,17 @@ public class FastSelect
   //finds the nth smallest value of the array
  public static int FastSelect(int[] arr, int n)
  {
+ if( arr.length == 1)
+     return arr[0];
 int res = 0;
    for( int test = 0; test < n; test++){
 	Partition(arr, 0, (arr.length - 1), test);
-     res = arr[test];
+         
+	res = arr[test];
    }
   return res;
  } // end FastSelect
+
 
   //main method for testing
   public static void main( String[] args )
@@ -126,11 +130,11 @@ int res = 0;
     //init test arrays of magic numbers
     int[] arr1 = {8,21,17,69,343};
     int[] arr3 = {1,28,33,4982,37};
-    int[] arr4 = {5,4,17,9000,6};
+    int[] arr4 = {17,4,5,9000,6};
     int[] arr5 = {3,0,16,599,1024};
     int[] arr6 = {7,1,5,12,3};
     int[] arr7 = {900, 800 , 700, 600 , 500};
-
+    int[] arr8 = {2};
     /**
     System.out.println("arr6: ");
     printArr(arr6);
@@ -144,6 +148,13 @@ int res = 0;
 
 
   // Fast select testing
+
+    System.out.println(" third smallest arr4; ");
+    printArr(arr4);
+    System.out.println(""+FastSelect(arr4,3));
+    System.out.println("-----------------------");
+
+
     System.out.println(" second smallest arr1: ");
     printArr(arr1);
     System.out.println(""+FastSelect(arr1,2));
@@ -159,9 +170,9 @@ int res = 0;
     System.out.println(""+FastSelect(arr7,5));
     System.out.println("-----------------------");
 
-    System.out.println(" BCS arr7: ");
-    printArr(arr7);
-    System.out.println(""+FastSelect(arr7,1));
+    System.out.println(" BCS arr8: ");
+    printArr(arr8);
+    System.out.println(""+FastSelect(arr8,1));
     System.out.println("-----------------------");
 
 
