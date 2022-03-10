@@ -135,6 +135,7 @@ int res = 0;
     int[] arr6 = {7,1,5,12,3};
     int[] arr7 = {900, 800 , 700, 600 , 500};
     int[] arr8 = {2};
+    int[] arr9 = { 2,7,56,54,32,5,3, 67, 76, 1 , 26 , 45};
     /**
     System.out.println("arr6: ");
     printArr(arr6);
@@ -175,6 +176,10 @@ int res = 0;
     System.out.println(""+FastSelect(arr8,1));
     System.out.println("-----------------------");
 
+    System.out.println("arr9: ");
+    printArr(arr9);
+    System.out.println(""+FastSelect(arr9,5));
+    System.out.println("-----------------------");
 
 
 
