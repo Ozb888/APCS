@@ -10,11 +10,13 @@
  *
  * 1. Summary of QuickSort algorithm:
  * QSort(arr):
- *
+ *    run partition on array, 
+	run partiion on each part of that partiitoned array
+		repeat until the low part is not less than the high
  * 2a. Worst pivot choice and associated run time:
- *
+ *     any that is element reliant Big O(n^2)
  * 2b. Best pivot choice and associated run time:
- *      
+ *     L-R Big O(n^2)
  * 3. Approach to handling duplicate values in array:
  *    consistently view as smaller
  **/
