@@ -1,4 +1,10 @@
+
 /***
+Max Schneider Perry Huang ,Oscar Breen
+APCS
+HW75 -- Nodal Recall -- Cdr and Car stuff
+2022-03-14
+time spent: 0.5
  * class LLNode
  * Implements a node, for use in lists and other container classes.
  * Stores its data as a String
