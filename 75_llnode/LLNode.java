@@ -89,7 +89,7 @@ public class LLNode
 
 
     //Q: when head ptr moves to next node in list, what happens to the node it just left?
-
+//     it is stored in reverse order
     //...so better: ?
     //
     //
