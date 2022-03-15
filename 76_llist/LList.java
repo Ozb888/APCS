@@ -58,10 +58,15 @@ public class LList implements List //interface def must be in this dir
 
   public String set( int index, String newVal )
   {
-    String res = "";
+//    String res = "";
     if ( index < 0 || index >= size() )
       throw new IndexOutOfBoundsException();
-    return res;
+     LLNode boc = _head;
+     for( int i = 0; i < index; i++){
+     	boc = boc.getNext();
+     }
+     boc.setCargo(newVal);
+    return newVal;
     // YOUR CODE HERE
   }
 
@@ -115,13 +120,11 @@ public class LList implements List //interface def must be in this dir
     System.out.println( "size: " + james.size() );
 
     System.out.println( "2nd item is: " + james.get(1) );
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     james.set( 1, "got" );
     System.out.println( "...and now 2nd item is: " + james.set(1,"got") );
 
     System.out.println( james );
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }
 
 }//end class LList
