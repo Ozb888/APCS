@@ -28,8 +28,14 @@ public class LList implements List //interface def must be in this dir
 
   public boolean add( String newVal )
   {
+    LLNode temp = _head;
+
+//   _head.setCargo(newVal);
+     while(temp.getNext() != null){
+	temp = temp.getNext();
+     }
      LLNode val = new LLNode(newVal, null);
-    _head.setNext(val);
+      temp.setNext(val);
      return true;
   }
 
@@ -42,7 +48,7 @@ public class LList implements List //interface def must be in this dir
       if (index == 0)
 	ind = (_head.getCargo());
      else
-	for(int i = 0; i < index; i++){
+	for(int i = 0; i <= index; i++){
 		ind = _head.getCargo();
 		_head = _head.getNext();
 	}
