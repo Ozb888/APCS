@@ -14,7 +14,7 @@ QCC
 ALGO
 
 Add
- - walks to psoiiton ot add, when arrived, sets backup Nodes to posiiton before and after, sets cargo of one of the backup nodes to 
+ - walks to position of add, when arrived, sets backup Nodes to position before and after, sets cargo of one of the backup nodes to 
 	newVal, then sets all other backup nodes to that new node to keep all the data.
 
 remove
