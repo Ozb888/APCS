@@ -1,3 +1,9 @@
+//Team Pom Pom: Max Schneider, Perry Huang, Oscar Breen
+//APCS
+//HW78 -- Double Up
+//2022-03-16
+//time spent: 0.2 hrs
+
 /***
  * interface List
  * subset of actual Java List interface

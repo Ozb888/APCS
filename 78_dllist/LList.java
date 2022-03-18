@@ -1,3 +1,27 @@
+/*Team Pom Pom: Max Schneider, Perry Huang, Oscar Breen
+* APCS
+* HW78 -- Double Up
+* 2022-03-16
+* time spent: 0.2 hrs
+*
+* DISCO:
+* All we had to do was create a couple of new methods by copying and pasting and update the constructors.
+* We had to update methods for _tail.
+*
+* QCC:
+* Are there simpler test cases to test our updated methods?
+* 
+* ALGO ADD
+* walks to psoiiton ot add, when arrived, sets backup Nodes to posiiton before and after, sets cargo of one of the backup nodes to 
+* newVal, then sets all other backup nodes to that new node to keep all the data.
+* sets _tail to the last value if the index parameter was one less than the size.
+*
+* ALGO REMOVE
+* walks to one before we are removing, sets cargo to what we are removing
+* sets node to cdr of second item after items position, skipping over than item, removing it.
+* sets _tail to the last value if the index parameter was one less than the size.
+*/
+
 /*****************************************************
  * class LList
  * Implements a linked list of DLLNodes, each containing String data
@@ -9,12 +33,14 @@ public class LList implements List //your List interface must be in same dir
 
   //instance vars
   private DLLNode _head;
+  private DLLNode _tail;
   private int _size;
 
   // constructor -- initializes instance vars
   public LList( )
   {
     _head = null; //at birth, a list has no elements
+    _tail = null;
     _size = 0;
   }
 
@@ -23,8 +49,12 @@ public class LList implements List //your List interface must be in same dir
     
   public boolean add( String newVal )
   {
+   
     DLLNode tmp = new DLLNode( newVal, _head , null);
-    _head = tmp;
+    _head = tmp; 
+    if (_size == 0){
+      _tail = tmp;  
+    }
     _size++;
     return true;
   }
@@ -65,7 +95,9 @@ public class LList implements List //your List interface must be in same dir
 
     //modify target node's cargo
     tmp.setCargo( newVal );
-
+    if (index == _size - 1) {
+      _tail = tmp;
+    }
     return oldVal;
   }
 
@@ -96,7 +128,9 @@ public class LList implements List //your List interface must be in same dir
 	    newNode.setNext( tmp.getNext() );
       newNode.setPrev(tmp);
 	    tmp.setNext( newNode );
-
+      if (index == _size - 1) {
+        _tail = newNode;
+      }
 	    //increment size attribute
 	    _size++;
     }
@@ -132,6 +166,10 @@ public class LList implements List //your List interface must be in same dir
 	    tmp.setNext( tmp.getNext().getNext() );
     }
 
+    if (index == _size - 1) {
+      _tail = tmp;
+    }
+
     //decrement size attribute
     _size--;
 
@@ -150,7 +188,7 @@ public class LList implements List //your List interface must be in same dir
 	    retStr += tmp.getCargo() + "->";
 	    tmp = tmp.getNext();
     }
-    retStr += "NULL";
+    retStr += "TAIL";
     return retStr;
   }
 

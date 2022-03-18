@@ -1,3 +1,27 @@
+/*Team Pom Pom: Max Schneider, Perry Huang, Oscar Breen
+* APCS
+* HW78 -- Double Up
+* 2022-03-16
+* time spent: 0.2 hrs
+*
+* DISCO:
+* All we had to do was create a couple of new methods by copying and pasting and update the constructors.
+* We had to update methods for _tail.
+*
+* QCC:
+* Are there simpler test cases to test our updated methods?
+* 
+* ALGO ADD
+* walks to psoiiton ot add, when arrived, sets backup Nodes to posiiton before and after, sets cargo of one of the backup nodes to 
+* newVal, then sets all other backup nodes to that new node to keep all the data.
+* sets _tail to the last value if the index parameter was one less than the size.
+*
+* ALGO REMOVE
+* walks to one before we are removing, sets cargo to what we are removing
+* sets node to cdr of second item after items position, skipping over than item, removing it.
+* sets _tail to the last value if the index parameter was one less than the size.
+*/
+
 /*****************************************************
  * class DLLNode
  * Implements a node, for use in lists and other container classes.
