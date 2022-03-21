@@ -51,34 +51,47 @@ public class Shuffler {
 	 * @param values is an array of integers simulating cards to be shuffled.
 	 */
 	public static void perfectShuffle(int[] values) {
-	int size = values.length;
-	int[] shuffled = new int[size];
-	int k = 0;
-	for(int j = 0; j < size-1; j++){
-		if(k < size-1){
-			if( j < size/2){
-			shuffled[k] = values[j];
-			k = k+2;
+	 		// int size = values.length;
+      //   int[] shuffled = new int[size];
+      //   int k = 0;
+      //   for(int j = 0; j < size/2; j++){
+      //           if(k < size){
+      //                   shuffled[k] = values[j];
+      //                   k = k+2;
+			//
+      //           }
+      //   }
+      //   k = 1;
+      //   for(int j = (size/2); j < size; j++){
+      //           if(k < size){
+      //                   shuffled[k] = values[j];
+      //                   k = k+2;
+      //           }
+			//
+      //   }
+      //   for(int i = 0; i < size; i++)
+      //           values[i] = shuffled [i];
+
+		int[] half1 = new int[values.length /  2];
+		int[] half2 = new int[values.length - half1.length];
+		for (int i = 0; i < values.length; i ++) {
+			if (i < values.length / 2) {
+				half1[i] = values[i];
 			}
+	}
+	int j = values.length / 2;
+	for (int i = 0; i < values.length - values.length / 2; i ++) {
+		half2[i]=values[i + values.length / 2];
+	}
+		int d = 0;
+		int i = 0;
+		while(d < values.length - 1) {
+			values[d] = half1[i];
+			values[d+1] = half2[i];
+			d+=2;
+			i +=1;
 		}
-	}
-	k = 1;
-        for(int j = size/2; j < size-1; j++){
-                if(k < size-1){
-                        if( j > size/2){
-                        shuffled[k] = values[j];
-                        k = k+2;
-                        }
-                }
 
-	}
-//	values = shuffled;
-
-	for(int i = 0; i < size; i++)
-		values[i] = shuffled [i];
-
-
-	/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
 	}
 
 	/**
