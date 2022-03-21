@@ -94,10 +94,10 @@ public class Shuffler {
 	 */
 	public static void selectionShuffle(int[] values) {
 		for (int i = values.length-1; i >= 0; i--){
-			int r = (int)(Math.random() * i);
+			int rand = (int)(Math.random() * i);
 			int temp = values[i];
-			values[i] = values[r];
-			values[r] = temp;
+			values[i] = values[rand];
+			values[rand] = temp;
 		}
 	}
 }
