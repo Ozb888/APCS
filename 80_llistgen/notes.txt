@@ -1,0 +1,13 @@
+Team Pom Pom: Max Schneider, Perry Huang, Oscar Breen
+APCS 
+HW80 -- Generically Speaking/ Using generics/ Altered DLLNode, List.java etc. to make the lists work with any object
+2022-03-24
+time spent: 0.2 hrs
+
+DISCO:
+We discovered that adding <T> after the class name and then after every instantiation of it makes it work for any object.
+You need to be comprehensive and visit every file.
+
+Q/C/C:
+Why didn't we just start with the one that works generically.
+Why doesn't everything work generically.
