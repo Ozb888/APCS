@@ -1,0 +1,19 @@
+
+Max Schneider, Perry Huang, Oscar Breen
+APCS
+HW<nn> -- <Roll Your Own Iterator/ AUgmenting Linked list to make it iterable
+2022-03-28
+time spent: 0.5
+
+DISCO:
+        The distinciton between getNext and getCargo is important, paired in most case
+        _dummy is very useful
+        classes can exist inside other classes
+QCC
+        should we use this class in class setup in the future?
+
+log
+
+Was able to fill in the methods of our private nested class MyIterator during class, making use of the _dummy, getNext(), getCargo, 
+get/setPrev() Methods to traverse. at home we completed the remove() method by setting the _dummy's previous to skip over one getPrev()
+ as well as updating _okToRemove to false after removing.
