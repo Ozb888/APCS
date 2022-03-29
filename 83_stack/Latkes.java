@@ -1,8 +1,8 @@
-//(P)BNJ -- Brian Li, Jefford Shau, Nakib Abedin
-//APCS pd07
-//HW83 - Stacks on Stacks
-//2022-03-28r
-//time spent: class time
+// Team Pom Pom: Max Schneider, Perry Huang, Oscar Breen
+// HW83 -- Stacks on Stacks 
+// APCS
+// 2022-03-28
+// Time spent: 0.5 hrs
 
 /***
  * class Latkes
@@ -13,11 +13,11 @@
 
 /***
     DISCO
-      - We thought of the end of the array as the top of the stack and this helped us implement the methods.
-      - The array and its size are encapsulated/hidden, while the methods are not.
-    QCC
-      - How is this activiy different from all of the other array activities we have been doing?
+    This class is pretty efficient because all the methods are O(1).
 
+    QCC
+    Is it possible to make a pop method that removes at index 0 that is more efficient?
+    Are all of these methods actually O(1)?
 
  **/
 
@@ -31,12 +31,6 @@ public class Latkes
   //constructor
   public Latkes( int initCapacity )
   {
-    /* your
-       SIMPLE
-       SMART
-       magicks
-       here
-    */
     _stackSize = 0;
     _stack = new String[initCapacity];
   }// O(1)
@@ -45,61 +39,42 @@ public class Latkes
   //means of insertion
   public void push( String s )
   {
-    /* your
-       SIMPLE
-       SMART
-       magicks
-       here
-    */
-    if(!isFull()){
-      _stack[_stackSize] = s;
-      _stackSize ++;
+    if (isFull()) {
+    System.out.println("Nope, we've reached max capacity.");
+    return;
     }
+    _stack[_stackSize] = s;
+    _stackSize++;
+    System.out.println("Added " + s);
   }// O(1)
 
 
   //means of removal
   public String pop( )
   {
-    /* your
-       SIMPLE
-       SMART
-       magicks
-       here
-    */
-    if(!isEmpty()){
-      String temp = _stack[_stackSize - 1];
-      _stack[_stackSize - 1] = null;
-      _stackSize --;
-      return temp;
+    if (isEmpty()) {
+        return "Nope, we've run out";
     }
-    return null;
+    String r = _stack[_stackSize - 1];
+    _stack[_stackSize - 1] = null;
+    _stackSize--;
+    System.out.print("Removed ");
+    return r;
+
   }// O(1)
 
 
-  //chk for emptiness
+  //check for emptiness
   public boolean isEmpty()
   {
-    /* your
-       SIMPLE
-       SMART
-       magicks
-       here
-    */
-    return _stackSize == 0;
+    return (_stackSize == 0);
   }// O(1)
 
 
   //chk for fullness
   public boolean isFull()
   {
-    /* your
-       SIMPLE
-       SMART
-       magicks
-       here
-    */
-    return _stackSize == _stack.length;
+    return (_stackSize == _stack.length);
   }// O(1)
 
 
@@ -107,7 +82,7 @@ public class Latkes
   public static void main( String[] args )
   {
 
-    Latkes tastyStack = new Latkes(12);
+    Latkes tastyStack = new Latkes(10);
 
     tastyStack.push("aoo");
     tastyStack.push("boo");
@@ -148,10 +123,8 @@ public class Latkes
     System.out.println( tastyStack.pop() );
 
     //stack empty by now; SOP(null)
-
     System.out.println( tastyStack.pop() );
     /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
-
       ^~~~~~~~~~~~~~~~AWESOME~~~~~~~~~~~~~~~^*/
 
   }//end main()
