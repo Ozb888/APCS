@@ -1,0 +1,12 @@
+Team Pom Pom: Max Schneider, Perry Huang, Oscar Breen
+APCS
+HW 86 -- What a Racket
+2022-03-31
+time spent: 1 hr
+
+DISCO
+We discovered how to use parseInt to turn the converted String into integers.
+We changed the names of our methods to not overlap with add and other methods of the same name.
+In subtracter, we iterated from right to left instead of left to right.
+
+QCC
