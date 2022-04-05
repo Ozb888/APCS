@@ -48,38 +48,21 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
   // assume _queue ! empty
   public SWASHBUCKLE dequeue()
   {
- SWASHBUCKLE retVal;
+    int randVal = (int)Math.random() * _size;
     LLNode<SWASHBUCKLE> temp = _front;
-    int randVal = (int) (Math.random() * _size);
-    System.out.println(randVal);
-
-    if (randVal == 0) {
-      retVal = _front.getCargo();
-      _front = _front.getNext();
-      _size--;
-      return retVal;
-    }
-    if (randVal == _size) {
-      for (int i = 0; i < randVal - 1; i++) {
-        temp = temp.getNext();
-      }
-      _end = temp;
-      retVal = _end.getCargo();
-      _end.setCargo(null);
-      _size--;
-      return retVal;
-    }
-
     for (int i = 0; i < randVal - 1; i++) {
       temp = temp.getNext();
     }
-    retVal = temp.getNext().getCargo();
+    SWASHBUCKLE retVal = temp.getNext().getCargo();
     temp.setNext(temp.getNext().getNext());
+
+    if ( _front == null ) //just moved past last node
+      _end = null;      //update _end to reflect emptiness
 
     _size--;
 
     return retVal;
- }//O(?)
+  }//O(?)
 
 
   public SWASHBUCKLE peekFront()
@@ -95,14 +78,6 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
    **/
   public void sample()
   {
-    int rand = (int)(Math.random() * _size);
-    SWASHBUCKLE ret;
-       for( int i = 0; i<rand; i++){
-         ret = dequeue();
-	 enqueue(ret);
-      }
-  }
-/*
     LLNode<SWASHBUCKLE> temp = _end;
     LLNode<SWASHBUCKLE> prev = _end;
     for (int i = 0; i < _size; i ++) {
@@ -121,10 +96,9 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
       else {
         temp=temp.getNext();
         prev=prev.getNext();
-*/
-      //} 
-    //}
-  //}//O(?)
+      } 
+    }
+  }//O(?)
 
 
   public boolean isEmpty()
@@ -146,51 +120,11 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
     return retStr;
   }//end toString()
 
-public class LLNode<T>
-  {
-    //instance vars
-    private T _cargo;    //cargo may only be of type T
-    private LLNode<T> _nextNode; //pointer to next LLNode<T>
-
-    // constructor -- initializes instance vars
-    public LLNode( T value, LLNode<T> next ) {
-      _cargo = value;
-      _nextNode = next;
-    }
-
-
-    //--------------v  ACCESSORS  v--------------
-    public T getCargo() { return _cargo; }
-
-    public LLNode<T> getNext() { return _nextNode; }
-    //--------------^  ACCESSORS  ^--------------
-
-
-    //--------------v  MUTATORS  v--------------
-    public T setCargo( T newCargo ) {
-      T foo = getCargo();
-      _cargo = newCargo;
-      return foo;
-    }
-
-    public LLNode<T> setNext( LLNode<T> newNext ) {
-      LLNode<T> foo = getNext();
-      _nextNode = newNext;
-      return foo;
-    }
-    //--------------^  MUTATORS  ^--------------
-
-
-    // override inherited toString
-    public String toString() { return _cargo.toString(); }
-
-  }//end class LLNode
-
-
   //main method for testing
   public static void main( String[] args )
   {
 
+      /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
     
     Queue<String> PirateQueue = new RQueue<String>();
 
@@ -205,10 +139,6 @@ public class LLNode<T>
     System.out.println("\nnow testing toString()..."); 
     System.out.println( PirateQueue ); //for testing toString()...
 
-    System.out.println("\nnow testing sample()..");
-    PirateQueue.sample();
-    System.out.println( PirateQueue);
-
     System.out.println("\nnow dequeuing..."); 
     System.out.println( PirateQueue.dequeue() );
     System.out.println( PirateQueue.dequeue() );
@@ -217,15 +147,11 @@ public class LLNode<T>
     System.out.println( PirateQueue.dequeue() );
     System.out.println( PirateQueue.dequeue() );
 
-    System.out.println("\nnow testing sample()..");
-    PirateQueue.sample();
-    System.out.println( PirateQueue);
-
-
     System.out.println("\nnow dequeuing fr empty queue...\n" +
                        "(expect NPE)\n"); 
     System.out.println( PirateQueue.dequeue() );
 
+      ^~~~~~~~~~~~~~~~AWESOME~~~~~~~~~~~~~~~^*/
 
   }//end main
 

@@ -22,6 +22,4 @@ public interface Queue<SWASHBUCKLE>
   public SWASHBUCKLE peekFront();
   //~~~~~~~~~~~~~~~~~~~end AP subset~~~~~~~~~~~~~~~~~~~
 
-  public void sample();
-
 }//end interface Queue

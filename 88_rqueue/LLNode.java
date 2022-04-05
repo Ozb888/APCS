@@ -1,8 +1,3 @@
-/***
- * class LLNode
- * Implements a node, for use in lists and other container classes.
- * Stores its data as a String
- **/
 public class LLNode<T>
   {
     //instance vars
