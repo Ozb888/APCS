@@ -91,26 +91,12 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
    **/
   public void sample()
   {
-    LLNode<SWASHBUCKLE> temp = _end;
-    LLNode<SWASHBUCKLE> prev = _end;
-    for (int i = 0; i < _size; i ++) {
-      int t = (int)(Math.random() * 3);
-      if (t == 0 && i!=0) {
-        prev.setNext(temp.getNext());
-        enqueue(temp.getCargo());
-        temp=prev.getNext();
-      }
-      else if(t == 1 && i!=0) {
-        prev.setNext(temp.getNext());
-        _end.setNext(temp);
-        _end = _end.getNext();
-        temp=prev.getNext();
-      } 
-      else {
-        temp=temp.getNext();
-        prev=prev.getNext();
-      } 
-    }
+   int rand (int)(Math.random() * _size);
+   int ret:
+   for(int i: i<rand; i++){
+    ret = dequeue();
+    enqueue(ret);
+   }
   }//O(?)
 
 
