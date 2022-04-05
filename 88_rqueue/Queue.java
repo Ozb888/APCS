@@ -20,6 +20,8 @@ public interface Queue<SWASHBUCKLE>
 
   //Returns the first element of the queue without dequeuing it.
   public SWASHBUCKLE peekFront();
+
+  public void sample();
   //~~~~~~~~~~~~~~~~~~~end AP subset~~~~~~~~~~~~~~~~~~~
 
 }//end interface Queue
