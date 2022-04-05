@@ -1,3 +1,16 @@
+
+// Team Pom Pom: Max Schneider, Perry Huang, Oscar Breen
+// APCS
+// HW88 -- BPC Kiddies Do Not Wait in Line Either
+// 2022-04-04
+// time spent: 1.5 hrs
+// DISCO
+// Instead of trying to use setNext we can just dequeue and enqueue repeatedly to sample.
+// Typecasting int should be done after putting parenthesis on the expression so that you don't accidentally make Math.random() into 0 every time.
+//
+// QCC
+// Is there a better way to implement dequeue so that there aren't so many conditionals?
+
 /***
  * class RQueue
  * SKELETON
