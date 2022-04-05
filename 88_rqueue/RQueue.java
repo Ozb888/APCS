@@ -48,16 +48,38 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
   // assume _queue ! empty
   public SWASHBUCKLE dequeue()
   {
-    SWASHBUCKLE retVal = _front.getCargo();
-    _front = _front.getNext();
+ SWASHBUCKLE retVal;
+    LLNode<SWASHBUCKLE> temp = _front;
+    int randVal = (int) (Math.random() * _size);
+    System.out.println(randVal);
 
-    if ( _front == null ) //just moved past last node
-      _end = null;      //update _end to reflect emptiness
+    if (randVal == 0) {
+      retVal = _front.getCargo();
+      _front = _front.getNext();
+      _size--;
+      return retVal;
+    }
+    if (randVal == _size) {
+      for (int i = 0; i < randVal - 1; i++) {
+        temp = temp.getNext();
+      }
+      _end = temp;
+      retVal = _end.getCargo();
+      _end.setCargo(null);
+      _size--;
+      return retVal;
+    }
+
+    for (int i = 0; i < randVal - 1; i++) {
+      temp = temp.getNext();
+    }
+    retVal = temp.getNext().getCargo();
+    temp.setNext(temp.getNext().getNext());
 
     _size--;
 
     return retVal;
-  }//O(?)
+ }//O(?)
 
 
   public SWASHBUCKLE peekFront()
@@ -73,6 +95,14 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
    **/
   public void sample()
   {
+    int rand = (int)(Math.random() * _size);
+    SWASHBUCKLE ret;
+       for( int i = 0; i<rand; i++){
+         ret = dequeue();
+	 enqueue(ret);
+      }
+  }
+/*
     LLNode<SWASHBUCKLE> temp = _end;
     LLNode<SWASHBUCKLE> prev = _end;
     for (int i = 0; i < _size; i ++) {
@@ -91,9 +121,10 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
       else {
         temp=temp.getNext();
         prev=prev.getNext();
-      } 
-    }
-  }//O(?)
+*/
+      //} 
+    //}
+  //}//O(?)
 
 
   public boolean isEmpty()
@@ -185,6 +216,11 @@ public class LLNode<T>
     System.out.println( PirateQueue.dequeue() );
     System.out.println( PirateQueue.dequeue() );
     System.out.println( PirateQueue.dequeue() );
+
+    System.out.println("\nnow testing sample()..");
+    PirateQueue.sample();
+    System.out.println( PirateQueue);
+
 
     System.out.println("\nnow dequeuing fr empty queue...\n" +
                        "(expect NPE)\n"); 

@@ -3,92 +3,42 @@
  * Implements a node, for use in lists and other container classes.
  * Stores its data as a String
  **/
-
-public class LLNode
-{
-  //instance vars
-  private String car;
-  private LLNode cdr;
-
-
-  // constructor
-  public LLNode( String value, LLNode next )
+public class LLNode<T>
   {
-    car = value;
-    cdr = next;
-  }
+    //instance vars
+    private T _cargo;    //cargo may only be of type T
+    private LLNode<T> _nextNode; //pointer to next LLNode<T>
 
-
-  //--------------v  ACCESSORS  v--------------
-  public String getCargo()
-  {
-    return car;
-  }
-
-  public LLNode getNext()
-  {
-    return cdr;
-  }
-  //--------------^  ACCESSORS  ^--------------
-
-
-  //--------------v  MUTATORS  v--------------
-  public String setCargo( String newCargo )
-  {
-    String oldCargo = car;
-    car = newCargo;
-    return oldCargo;
-  }
-
-  public LLNode setNext( LLNode newNext )
-  {
-    LLNode oldNext = cdr;
-    cdr = newNext;
-    return oldNext;
-  }
-  //--------------^  MUTATORS  ^--------------
-
-
-  // override inherited toString
-  public String toString()
-  {
-    if (cdr == null) {
-      return car;
-    } else {
-      return car + " > " +  cdr.toString();
-    }
-  }
-
-
-  //main method for testing
-  public static void main( String[] args )
-  {
-
-    //Below is an exercise in creating a linked list...
-
-    //Create a node
-    LLNode first = new LLNode( "cat", null );
-
-    //Create a new node after the first
-    first.setNext( new LLNode( "dog", null ) );
-
-    //Create a third node after the second
-    first.getNext().setNext( new LLNode( "cow", null ) );
-
-
-    LLNode temp = first;
-    while( temp != null ) {
-      System.out.println( temp );
-      temp = temp.getNext();
+    // constructor -- initializes instance vars
+    public LLNode( T value, LLNode<T> next ) {
+      _cargo = value;
+      _nextNode = next;
     }
 
-    //Q: when head ptr moves to next node in list, what happens to the node it just left?
 
-    //...so better: ?
-    //
-    //
-    //
+    //--------------v  ACCESSORS  v--------------
+    public T getCargo() { return _cargo; }
 
-  }//end main
+    public LLNode<T> getNext() { return _nextNode; }
+    //--------------^  ACCESSORS  ^--------------
 
-}//end class LLNode
+
+    //--------------v  MUTATORS  v--------------
+    public T setCargo( T newCargo ) {
+      T foo = getCargo();
+      _cargo = newCargo;
+      return foo;
+    }
+
+    public LLNode<T> setNext( LLNode<T> newNext ) {
+      LLNode<T> foo = getNext();
+      _nextNode = newNext;
+      return foo;
+    }
+    //--------------^  MUTATORS  ^--------------
+
+
+    // override inherited toString
+    public String toString() { return _cargo.toString(); }
+
+  }//end class LLNode
