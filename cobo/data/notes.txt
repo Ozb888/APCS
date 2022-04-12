@@ -1,0 +1,21 @@
+Team Kellogs Cereal :: Eric He, Oscar Breen, Russell Goychayev
+APCS
+LAB08 -- America's Next Top Data Scientist
+2022-04-05
+time spent: <elapsed time in hours, rounded to nearest tenth>
+
+
+DISCO
+* -d means destination
+* : is a token means path to this
+
+QCC
+
+
+<TNPG>'s CSV FLOW:
+<insert your description of your tools and workflow in creating, editing CSV files>
+
+
+TRUBZ
+<this lab involves using tools that are likely to introduce hiccups; log any troubleshooting issues here>
+* 
