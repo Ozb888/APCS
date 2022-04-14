@@ -6,7 +6,7 @@ time spent: 1 hr                                      <br>
 
 To Do:                                      <br>
 All done!                                   <br>
-
+ArrayList - Mostly annoying, Linked List a lot more concise
 LinkedList - Mostly EZ                      <br>
 
 public void addFirst(T newVal); EZ          <br>
@@ -21,5 +21,5 @@ public boolean addAll (Collection<T> c); EZ <br>
 public Iterator<T> descendingIterator(); EZ <br>
 public boolean offerFirst(T newVal); EZ     <br>
 public boolean offerLast(T newVal); EZ      <br>
-public boolean remove(T o);                 <br>
-public boolean removeLastOccurence(T o);    <br>
+public boolean remove(T o); EZ              <br>
+public boolean removeLastOccurence(T o); EZ <br>
