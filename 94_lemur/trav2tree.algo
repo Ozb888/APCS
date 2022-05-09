@@ -1,0 +1,90 @@
+Team Pom Pom: Max Schneider, Perry Huang, Oscar Breen
+APCS pd07
+HW94 -- reverse engineering
+2022-05-06
+time spent: 1 hrs
+
+
+DISCO
+------------------------------------------------
+* Recursive algos are the way to go
+* Algos need to be well-organized and folloewd carefully
+================================================
+
+
+QCC
+------------------------------------------------
+* Do our algos work?
+* Are there any special cases that break algos
+* Is one node a tree?
+* What do onto and 1-to-1 mean in the context of trees?
+================================================
+
+
+HOW KEEN ARE YOUR POWERS OF OBSERVATION?
+------------------------------------------------
+Q: For a given binary tree, how many unique pre-order traversals are there?
+A: 1
+
+Q: For a given binary tree, how many unique in-order traversals are there?
+A: 1
+
+Q: For a given binary tree, how many unique post-order traversals are there?
+A: 1
+
+Q: For a given traversal, how many unique trees could have produced it?
+A: The number of unique trees are equal to the number of nodes in the traversal.
+
+Q: Given a pre-order traversal, what can you infer about its tree?
+A: The first node is the root and the last node is the rightmost node.
+
+Q: Given a post-order traversal, what can you infer about its tree?
+A: The last node is the root and the first node is the leftmost node.
+
+Q: What does "1-to-1" mean?
+A: Every input has exactly one output
+
+Q: What does "onto" mean?
+A: Every input has at least one output
+
+================================================
+
+ALGO for one pre-order and one post-order
+------------------------------------------------
+givens:
+* Traversals make valid tree
+* Trees are binary
+procedure: (letters in parentheses are the new name of the node they are next to)
+* First letter of pre-order is the root.
+* If second to last of post is second in pre, that letter is child of root (o).
+  * Remove root and start procedure again, the resulting tree is the subtree of the tree with root o
+* If not, second of pre is left child (l) of root and second to last of post is right child (r) of root
+  * remove all letters including and after r in pre, and take the same letters out of post. Also take out root. Restart procedure on remaining letters to get subtree with root l
+  * remove all letters before (r) in pre, and take the same letters out of post, restart procedure on remaining letters to get subtree with root r
+
+================================================
+
+ALGO for one in-order and one post-order
+------------------------------------------------
+givens:
+* Traversals make valid tree
+* Trees are binary
+procedure: (letters in parentheses are the new name of the node they are next to)
+* Last letter of post is root
+* Identify root in in-order
+* remove everything after and including the root in in-order. Remove same letters from post. Restart to get left subtree of the root
+* remove everything before and including the root in in-order. Remove same letters from post. Restart to get right subtree of the root
+================================================
+
+ALGO for one pre-order and one in-order
+------------------------------------------------
+givens:
+* Traversals make valid tree
+* Trees are binary
+procedure: (letters in parentheses are the new name of the node they are next to)
+* First letter of pre  is root
+* Identify root in in-order
+* remove everything after and including the root in in-order. Remove same letters from pre. Restart to get left subtree of the root
+* remove everything before and including the root in in-order. Remove same letters from pre. Restart to get right subtree of the root
+================================================
+================================================
