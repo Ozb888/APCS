@@ -2,9 +2,9 @@ Max Schneider  Perry Huang  Oscar Breen
 APCS
 HW 95 -- Algorithm as Data Structure -- writing the trees as code
 2022-05-09
-time spent: <elapsed time in hours, rounded to nearest tenth>
+time spent: 2 hrs
 
  L = level  d = depth  h = height
 q1) a perfect binary tree has 2^h -1 nodes
-q2) at each level a perfect binary tree has __ nodes
-q3)height of a complete binary tree w/ n nodes is _____
+q2) at each level a perfect binary tree has 2d nodes
+q3)height of a complete binary tree w/ n nodes is log2(n) + 1

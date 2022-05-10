@@ -83,8 +83,8 @@ public class BST
   }
   public void preOrderTrav( TreeNode currNode )
   {
-   if (!(currNode == null)) {
-    System.out.println(currNode.getValue());
+   if (currNode != null) {
+    System.out.print(currNode.getValue());
       preOrderTrav(currNode.getLeft());
       preOrderTrav(currNode.getRight());
     }
@@ -97,9 +97,9 @@ public class BST
   }
   public void inOrderTrav( TreeNode currNode )
   {
-    if (!(currNode == null)) {
+    if (currNode != null) {
       inOrderTrav(currNode.getLeft());
-       System.out.println(currNode.getValue());
+       System.out.print(currNode.getValue());
        inOrderTrav(currNode.getRight());
     }
   }
@@ -110,10 +110,10 @@ public class BST
   }
   public void postOrderTrav( TreeNode currNode )
   {
-    if(!(currNode == null)){
+    if(currNode != null){
       postOrderTrav(currNode.getLeft());
       postOrderTrav(currNode.getRight());
-      System.out.println(currNode.getValue());
+      System.out.print(currNode.getValue());
    }
   }
 
