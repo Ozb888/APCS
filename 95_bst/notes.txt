@@ -2,9 +2,19 @@ Max Schneider  Perry Huang  Oscar Breen
 APCS
 HW 95 -- Algorithm as Data Structure -- writing the trees as code
 2022-05-09
-time spent: 2 hrs
+time spent: <.2>
+
+Disco:
+* Recursion Recursion Recursion
+* Treating left and right as subtrees unlocks lots of functionality
+* New way of generating subtrees
+
+QCC:
+* What is the point of generating a tree the way we did it?
+* When can we generate a tree based on traversals?
+
 
  L = level  d = depth  h = height
 q1) a perfect binary tree has 2^h -1 nodes
-q2) at each level a perfect binary tree has 2d nodes
-q3)height of a complete binary tree w/ n nodes is log2(n) + 1
+q2) at each level a perfect binary tree has 2^d nodes
+q3)height of a complete binary tree w/ n nodes is log(base 2)n ceiling
