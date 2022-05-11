@@ -1,0 +1,15 @@
+Max Schneider, Oscar breen, Perry Huang
+APCS
+HW96 -- BSTs is the Perfect Place for Shade / making height and leaf count methods and a search method
+2022-05-10
+time spent: 1
+
+DISCO:
+
+  - Travelling down trees for any form will be recursive.
+  - All these methods are simpler to write in TreeNode.java
+
+
+QCC
+  - Should these methods be written in BST?
+  - how would leaf count be utilized?
