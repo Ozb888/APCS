@@ -141,6 +141,85 @@ public class TreeNode
 
       }
       return i;
+    }
+
+    public TreeNode findPar(int val) {
+      if (this.getLeft() != null) {
+        if (this.getLeft().getValue() == val) {
+          return this;
+        }
+        if (this.getLeft().getValue() > val) {
+          return this.getLeft().findPar(val);
+        }
+      }
+      if (this.getRight() != null) {
+        if (this.getRight().getValue() == val) {
+          return this;
+        }
+
+        if (this.getRight().getValue() < val) {
+          return this.getRight().findPar(val);
+        }
+      }
+
+
+      return null;
+    }
+
+
+    public void remove(int val) {
+      if (this.getValue() > val) {
+        if (this.getLeft().getLeft() == null && this.getLeft().getRight() == null) {
+          this.setLeft(null);
+        } else if (this.getLeft().getLeft() == null || this.getLeft().getRight() == null) {
+          if (this.getLeft().getLeft() == null) {
+            this.setLeft(this.getLeft().getRight());
+          } else {
+            this.setLeft(this.getLeft().getLeft());
+          }
+        } else {
+          TreeNode temp = this.getLeft();
+          if (temp.getLeft().getRight() != null) {
+            temp = temp.getLeft();
+            while(temp.getRight().getRight() != null) {
+              temp = temp.getRight();
+            }
+            this.getLeft().setValue(temp.getRight().getValue());
+            temp.remove(temp.getRight().getValue());
+
+          }
+          else {
+            temp.getLeft().setRight(temp.getRight());
+            this.setLeft(temp.getLeft());
+          }
+
+        }
+      } else {
+        if (this.getRight().getLeft() == null && this.getRight().getRight() == null) {
+          this.setRight(null);
+        } else if (this.getRight().getLeft() == null || this.getRight().getRight() == null) {
+          if (this.getRight().getLeft() == null) {
+            this.setRight(this.getRight().getRight());
+          } else {
+            this.setRight(this.getRight().getLeft());
+          }
+        } else {
+          TreeNode temp = this.getRight();
+          if (temp.getRight().getLeft() != null) {
+            temp = temp.getRight();
+            while(temp.getLeft().getLeft() != null) {
+              temp = temp.getRight();
+            }
+            this.getRight().setValue(temp.getLeft().getValue());
+            temp.remove(temp.getLeft().getValue());
+
+          }
+          else {
+            temp.getLeft().setRight(temp.getRight());
+            this.setRight(temp.getLeft());
+          }
+        }
+      }
 
     }
 }//end class

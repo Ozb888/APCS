@@ -149,105 +149,53 @@ public class BST
       return _root.numLeaves();
     }
 
-
-    public void remove(int val){
-     TreeNode curr = _root;
-     TreeNode parent = null;
-     boolean onright = false;
-    if (curr.getLeft() == null && curr.getRight() == null) {
-      if (parent == null) {
-        _root = null;
-      }
-      else if(onleft) {
-        parent.setRight(null);
-      }
-      else {
-        parent.setLeft(null);
-      }
+    public void remove(int val) {
+      TreeNode ParRem = _root.findPar(val);
+      ParRem.remove(val);
     }
-
-    else if (curr.getLeft() != null && curr.getRight() != null) {
-      TreeNode right = curr.getRight();
-      TreeNode left = curr.getLeft();
-      curr = curr.getRight(); 
-
-      while (curr.getLeft() != null) {
-        curr = curr.getLeft(); 
-      }
-      curr.setLeft(left);
-      if (parent == null) {
-        _root = right;
-      }
-
 
   //main method for testing
   public static void main( String[] args )
   {
 
-     BST arbol = new BST();
+      BST arbol = new BST();
 
-	System.out.println( "tree init'd: " + arbol );
-
-	//inserting in this order will build a perfect tree
-	arbol.insert( 3 );
-	arbol.insert( 1 );
-	arbol.insert( 0 );
-	arbol.insert( 2 );
-	arbol.insert( 5 );
-	arbol.insert( 4 );
-	arbol.insert( 6 );
-	/*
-	*/
-
-	//insering in this order will build a linked list to left
-	/*
-	arbol.insert( 6 );
-	arbol.insert( 5 );
-	arbol.insert( 3 );
-	arbol.insert( 4 );
-	arbol.insert( 2 );
-	arbol.insert( 1 );
-	arbol.insert( 0 );
-	*/
-
-	System.out.println( "tree after insertions:\n" + arbol );
-	System.out.println();
-
-	System.out.println();
-	for( int i=-1; i<8; i++ ) {
-	    System.out.println(" searching for "+i+": " + arbol.search(i) );    
-	}
-
-	System.out.println();
-	System.out.println( arbol );
-
-	arbol.remove(6);
-	System.out.println();
-	System.out.println( arbol );
-
-	arbol.remove(5);
-	System.out.println();
-	System.out.println( arbol );
-
-	arbol.remove(4);
-	System.out.println();
-	System.out.println( arbol );
-
-	arbol.remove(3);
-	System.out.println();
-	System.out.println( arbol );
-
-	arbol.remove(2);
-	System.out.println();
-	System.out.println( arbol );
-
-	arbol.remove(1);
-	System.out.println();
-	System.out.println( arbol );
-
-	arbol.remove(0);
-	System.out.println();
-	System.out.println( arbol );
+      //PROTIP: sketch state of tree after each insertion
+      //        ...BEFORE executing these.
+      arbol.insert(15);
+      arbol.insert(8);
+      arbol.insert(23);
+      arbol.insert(4);
+      arbol.insert(12);
+      arbol.insert(19);
+      arbol.insert(27);
+      arbol.insert(2);
+      arbol.insert(6);
+      arbol.insert(10);
+      arbol.insert(14);
+      arbol.insert(17);
+      arbol.insert(21);
+      arbol.insert(25);
+      arbol.insert(29);
+      arbol.insert(31);
+      arbol.insert(1);
+      arbol.insert(3);
+      arbol.insert(5);
+      arbol.insert(7);
+      arbol.insert(9);
+      arbol.insert(11);
+      arbol.insert(13);
+      arbol.insert(30);
+      arbol.insert(16);
+      arbol.insert(18);
+      arbol.insert(20);
+      arbol.insert(22);
+      arbol.insert(24);
+      arbol.insert(26);
+      arbol.insert(28);
+      arbol.remove(8);
+      arbol.inOrderTrav();
+  //      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ //
   }
 
 }//end class
