@@ -1,0 +1,16 @@
+Max Schneider, Oscar Breen, Perry Huang
+APCS
+HW97 -- <Prune your Tree / adding a remove method
+2022-05-11
+time spent: 2
+
+DISCO 
+   - Its a lot of code
+   - removing a node with two kids is significantly harder than one with two kids
+   - there are a lot of scenarios, 
+   - we have to have double of each code for both a left and right scenario
+
+QCC:
+   - how to remove root without parent of root
+   - how would we make this shorter
+
