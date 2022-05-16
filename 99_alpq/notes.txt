@@ -1,0 +1,20 @@
+Team Pom Pom: Max Schneider, Perry Huang, Oscar Breen
+APCS
+HW99 -- Some Are More Equal Than Others, Codified
+2022-05-13
+time spent: 0 hrs (did it in class)
+
+DISCO
+APQ was easy to implement
+The interface was not complicated at all
+Adding in APQ is similar to insertionSort
+
+QCC
+Can this be translated to work on objects?
+What is the benefit of an APQ?
+
+Time Complexities
+peekMin(): O(1)
+removeMin(): O(1)
+isEmpty(): O(1)
+add(): O(1) to O(n)
