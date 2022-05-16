@@ -1,0 +1,2 @@
+Check root, if smaller then make this node new root and connect it to the old root.
+Else, traverse down the heap until a smaller node is found. Then insert this node in between the smaller node and its parent node.

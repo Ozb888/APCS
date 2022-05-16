@@ -1,0 +1,2 @@
+Find node that you want to remove. If it is the root, set the root to the next node.
+Else, make the parent of the node point to the next node.

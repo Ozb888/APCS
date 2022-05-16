@@ -1,0 +1,11 @@
+Team Pom Pom: Max Schneider, Perry Huang, Oscar Breen
+APCS
+HW101 -- Heap o’Trouble
+2022-05-16
+time spent: 420 hrs
+
+DISCO
+The algos were really simple to write down.
+
+QCC
+Would making the heap a linked list defeat the purpose of the heap?
