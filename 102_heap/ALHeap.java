@@ -1,4 +1,16 @@
-  /**
+  /*
+ * Team Pom Pom: Max Schneider, Perry Huang, Oscar Breen
+ * APCS
+ * HW102 -- Heap On Heapin' On
+ * 2022-05-17
+ * time spent: 0.5 hrs
+ * 
+ * DISCO
+ * The visualizer helped a lot with understanding how adding and removing works.
+ * 
+ * QCC
+ * How to make cool toString?
+ * 
  * class ALHeap
  * SKELETON
  * Implements a min heap using an ArrayList as underlying container
