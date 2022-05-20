@@ -74,12 +74,12 @@ public class Heapsort
       int addValPos = i - 1; //val to add is next non-heap element
 
       //now must percolate up
-      while( a[addValPos] > 0 ) { //potentially swap until reach root
+      while( addValPos > 0 ) { //potentially swap until reach root
 
         //pinpoint parent
         int parentPos = (addValPos-1) / 2;
 
-        if ( a[addValPos] > a[parentPos] ) {
+        if ( a[addValPos] < a[parentPos] ) {
           swap(addValPos, parentPos, a);
           addValPos = parentPos;
         }
@@ -98,12 +98,12 @@ public class Heapsort
       int addValPos = i - 1; //val to add is next non-heap element
 
       //now must percolate up
-      while( a[addValPos] > 0 ) { //potentially swap until reach root
+      while( addValPos > 0 ) { //potentially swap until reach root
 
         //pinpoint parent
         int parentPos = (addValPos-1) / 2;
 
-        if ( a[addValPos] < a[parentPos] ) {
+        if ( a[addValPos] > a[parentPos] ) {
           swap(addValPos, parentPos, a);
           addValPos = parentPos;
         }
